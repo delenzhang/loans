@@ -82,7 +82,7 @@ export default function compute(values) {
     等额本金： 需要第一月还${debj} 每月递减 ${delta}， 还款总额为 ${debjTotal.toFixed(2)}。
     利滚利定投：
     投资利率 ${rate}%
-    等额本息 去掉 等额本金后期投资(机会成本) 共赚取 ${debxTouzhi} 定投利息；
+    等额本息 去掉 等额本金后期投资(机会成本) 共赚取 ${debxTouzhi.toFixed(2)} 定投利息；
     等额本金比等额本息少交利息 ${(debxTotal - debjTotal).toFixed(2)}；
     个人总收益  ${(debxTouzhi - (debxTotal - debjTotal)).toFixed(2)}
   `
