@@ -4,20 +4,20 @@ function getDebx(totalM, rate, totalY) {
   return (
     (totalM * (monthRate * (1 + monthRate) ** totalMonth)) /
     ((1 + monthRate) ** totalMonth - 1)
-  ).toFixed(2);
+  );
 }
 // 获取等额本金第一个月还款
 function getFirstMonthDebj(totalM, rate, totalY) {
   let monthRate = rate / 100 / 12;
   let totalMonth = totalY * 12;
-  return (totalM / totalMonth + totalM * monthRate).toFixed(2);
+  return (totalM / totalMonth + totalM * monthRate);
 }
 
 // 获取等额本金每个月递减金额
 function getDebjDetla(totalM, rate, totalY) {
   let monthRate = rate / 100 / 12;
   let totalMonth = totalY * 12;
-  return ((totalM / totalMonth) * monthRate).toFixed(2);
+  return ((totalM / totalMonth) * monthRate);
 }
 
 // 利滚利
@@ -26,10 +26,10 @@ function getMoneyCompound(r, t, debj, debx, delta) {
   let total = 0;
   for (let i = 0; i < t * 12; i++) {
     let curDebj = debj - delta * i;
-    let realM = (curDebj - debx).toFixed(2);
+    let realM = (curDebj - debx);
     console.log(`第${i + 1}月省下`, realM);
-    let curM = (realM * (1 + r / 12) ** (t * 12 - i - 1)).toFixed(2);
-    let earnM = (curM - realM).toFixed(2);
+    let curM = (realM * (1 + r / 12) ** (t * 12 - i - 1));
+    let earnM = (curM - realM);
     console.log(
       `连本带利继续定投${t * 12 - i - 1}月，总共 赚 ${earnM} 利息`
     );
@@ -79,7 +79,7 @@ export default function compute(values) {
     基础信息：
     贷款期限 ${totalYear} 年 
     等额本息： 需要每月还${debx.toFixed(2)}, 还款总额为 ${debxTotal.toFixed(2)}；
-    等额本金： 需要第一月还${debj.toFixed(2)} 每月递减 ${delta}， 还款总额为 ${debjTotal.toFixed(2)}。
+    等额本金： 需要第一月还${debj.toFixed(2)} 每月递减 ${delta.toFixed(2)}， 还款总额为 ${debjTotal.toFixed(2)}。
     利滚利定投：
     投资利率 ${rate}%
     等额本息 去掉 等额本金后期投资(机会成本) 共赚取 ${debxTouzhi.toFixed(2)} 定投利息；
