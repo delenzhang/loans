@@ -8,15 +8,21 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "antd": "^4.7.0",
+    "babel-plugin-import": "^1.13.1",
+    "compression-webpack-plugin": "^6.0.3",
+    "customize-cra": "^1.0.0",
     "moment": "^2.29.1",
+    "progress-bar-webpack-plugin": "^2.1.0",
     "react": "^16.14.0",
+    "react-app-rewired": "^2.1.6",
     "react-dom": "^16.14.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "webpack-bundle-analyzer": "^3.9.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "GENERATE_SOURCEMAP=false react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

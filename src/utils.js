@@ -78,8 +78,8 @@ export default function compute(values) {
   let text = `
     基础信息：
     贷款期限 ${totalYear} 年 
-    等额本息： 需要每月还${debx}, 还款总额为 ${debxTotal}；
-    等额本金： 需要第一月还${debj} 每月递减 ${delta}， 还款总额为 ${debjTotal.toFixed(2)}。
+    等额本息： 需要每月还${debx.toFixed(2)}, 还款总额为 ${debxTotal.toFixed(2)}；
+    等额本金： 需要第一月还${debj.toFixed(2)} 每月递减 ${delta}， 还款总额为 ${debjTotal.toFixed(2)}。
     利滚利定投：
     投资利率 ${rate}%
     等额本息 去掉 等额本金后期投资(机会成本) 共赚取 ${debxTouzhi.toFixed(2)} 定投利息；

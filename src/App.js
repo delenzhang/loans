@@ -1,6 +1,10 @@
 import React, { useState } from "react";
-import { Form, InputNumber, Button, ConfigProvider } from "antd";
-import { Area } from "@ant-design/charts";
+import Form from 'antd/es/form'
+import InputNumber from 'antd/es/input-number'
+import Button from 'antd/es/button'
+import ConfigProvider from 'antd/es/config-provider'
+// import { Form, InputNumber, Button, ConfigProvider } from "antd";
+import Area from "@ant-design/charts/es/area";
 import compute from "./utils";
 import zhCN from "antd/es/locale/zh_CN";
 import moment from "moment";
