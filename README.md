@@ -24,3 +24,26 @@ In the project directory, you can run:
 Launches the test runner in the interactive watch mode.<br />
 
 ### `yarn build`
+
+## 计算方法
+1. 总额 a
+2. 月利息 r （ 贷款利率/12）
+3. 期数 n （年限*12） 
+### 等额本金
+ 月还款：
+   第1月 a / n + a * r
+   第2月 a / n + a * （n-1）/ n * r
+   ...
+   第n月 a/n + a / n * r
+
+### 等额本息
+ 假设月还款 为 X
+ 则每月剩余金额:
+ 初始 a0 = a
+ 第1个月 a1 = a0 * （1+r） - X
+ 第2个月  a2 = a1 * （1+r） - X 
+ 第3个月  a3 = a2 * （1+r） - X
+ ...
+ 第n个月  a_n = a_n-1 * （1+r） - X = 0
+
+ X = a(1+r)^n*r / ((1+r)^n - 1)
